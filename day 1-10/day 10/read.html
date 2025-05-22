@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Day 10</h1>
+
+    <script>
+        let car = {
+            brand: "Lexus",
+            model: 300,
+            year: '2025',
+            color: 'Black',
+            user: function() {
+                console.log(`Hello this is a ${this.brand} its a Lexus ${this.model} from the year ${this.year} and its ${this.color}`)
+            }
+        };
+
+        console.log(car.brand); //notice we can call them two ways this
+        console.log(car['model']); // or this
+
+        car.user();
+    </script>
+
+</body>
+
+</html>

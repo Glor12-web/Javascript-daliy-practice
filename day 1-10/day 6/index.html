@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>DAy 6</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, perferendis.</p>
+    <script>
+        let age = 20;
+        let hasID = true;
+        let isStudent = false;
+
+
+        //AND && since will are using if and  && this only work when the stament is true
+        if (age >= 20 && hasID) {
+            console.log("Access granted!");
+        }
+
+        // LOgical OR
+
+        if (age >= 18 || isStudent) {
+            console.log("Limited access!")
+        }
+
+        // i notice at first when i use less than or eqaul 18 ad error occur because  both statement are false and logical OR only work if at least one is true
+
+
+
+        if (!isStudent) {
+            console.log("You need student status.")
+        }
+    </script>
+
+
+</body>
+
+</html>
