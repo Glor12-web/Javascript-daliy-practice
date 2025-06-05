@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Day 13 - Simple To-Do List</title>
+</head>
+
+<body>
+
+    <h1>Day 13 – To-Do List</h1>
+
+    <!-- Input field and buttons -->
+    <input type="text" id="todoInput" placeholder="Enter your task">
+    <button onclick="addTask()">Add</button>
+    <button onclick="clearTasks()">Clear</button>
+
+    <!-- Where tasks will appear -->
+    <ul id="todoList"></ul>
+
+    <script>
+        // 🔸 Array to store tasks
+        let tasks = [];
+
+        // 🔸 Function to add task
+        function addTask() {
+            let input = document.getElementById('todoInput');
+            let task = input.value.trim(); // Remove extra spaces
+
+            if (task !== "") {
+                tasks.push(task); // Add to array
+                displayTasks(); // Show updated list
+                input.value = ""; // Clear input field
+            }
+        }
+
+        // 🔸 Function to display tasks
+        function displayTasks() {
+            let list = document.getElementById('todoList');
+            list.innerHTML = ""; // Clear existing list
+
+            // Loop through the array
+            tasks.forEach(function(task, index) {
+                let li = document.createElement('li'); // Create list item
+                li.textContent = (index + 1) + ". " + task;
+                list.appendChild(li);
+            });
+        }
+
+        // 🔸 Function to clear the list
+        function clearTasks() {
+            tasks = []; // Reset array
+            displayTasks(); // Refresh the display
+        }
+    </script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>

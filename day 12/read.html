@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js events</title>
+</head>
+
+<body>
+
+    <h1>Day 12 -Events</h1>
+
+    <!--Question one Create 3 p tags-->
+    <p class="tag-1">Hello my name is Glory</p>
+    <p class="tag-2">Am a Front end dev</p>
+    <p class="tag-3">And i have to learn javascript</p>
+
+    <!--Question two Create 1 id-->
+    <div id="Glory">Dom manipulation</div>
+    <script>
+        //Use queryselector() to change the text of the first tag
+        let tagOne = document.querySelector('.tag-1');
+        tagOne.addEventListener('mouseover', function() {
+            tagOne.style.color = 'blue';
+        })
+
+        tagOne.addEventListener('mouseout', function() {
+            tagOne.style.color = 'black';
+        })
+
+        //use Queryselectorall to loop through all p tag and change the color
+
+        let paragraph = document.querySelectorAll('p');
+        paragraph.forEach(paragraph => {
+            paragraph.style.color = 'red';
+        });
+
+        document.getElementById('Glory').innerText = 'Hello this text was change with js';
+    </script>
+</body>
+
+</html>

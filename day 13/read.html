@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Day 13 - DOM</h1>
+    <button onclick="addItem()">Add Item</button>
+    <button onclick="removeItem()">Remove Item</button>
+
+
+    <ul id="demo"></ul>
+
+    <script>
+        function addItem() {
+            let head = document.getElementById('demo');
+            let newItem = document.createElement("li");
+            newItem.textContent = "New item added";
+            head.appendChild(newItem);
+        }
+
+        function removeItem() {
+            let head = document.getElementById('demo');
+            if (head.lastChild) {
+                head.removeChild(head.lastChild);
+            }
+        }
+
+        // what is the logic between appendChild(newItem); (head.lastChild) head.removeChild(head.lastChild);
+    </script>
+</body>
+
+
+</html>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Forms + Form Validation</title>
+</head>
+
+<body>
+
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Enter Name">
+
+        <input type="email" id="email" placeholder="Enter Email">
+
+        <button id="submit" type="submit">Submit Form</button>
+    </form>
+
+    <p id="error" style="color: red;"></p>
+    <script>
+        function validateForm() {
+            let Name = document.getElementById("name").value;
+            let Email = document.getElementById('email').value;
+            let error = document.getElementById('error');
+
+
+            if (Name === "" || Email === "") {
+                error.textContent = "All Field are Required!";
+                return false;
+            }
+
+            if (!Email.includes('@')) {
+                error.textContent = "Invalid Email!";
+                return false;
+            }
+
+            error.textContent = "Form Submitted!";
+            return true;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 🌞 Day 12: JavaScript Events (Click, Mouseover, etc.)
-✅ What You’ll Learn
+
 What are Events in JavaScript?
 
 Common event types (click, mouseover, mouseout, dblclick, etc.)
@@ -10,9 +10,7 @@ addEventListener() vs inline event
 An event is an action that occurs in the browser, like clicking a button, hovering over text, or typing into an input field. JavaScript allows you to respond to these events.
 
 ✅ Example
-html
-Copy
-Edit
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

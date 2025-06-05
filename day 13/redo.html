@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13 - Simple To-Do List</title>
+</head>
+
+<body>
+    <h1>Day 13 – To-Do List</h1>
+
+    <!-- Input field and buttons -->
+    <input type="text" placeholder="Enter item" id="groceryInput">
+
+    <button onclick="addItem()">Add Item</button>
+    <button onclick="removeItem()">Clear List</button>
+
+    <!-- Where item will appear -->
+    <ul id="newSupply"></ul>
+
+    <script>
+        //  Array to store item
+        let newItem = [];
+
+        function addItem() {
+            let input = document.getElementById('groceryInput')
+            let item = input.value.trim(); // Remove extra spaces
+
+            if (item !== "") {
+                newItem.push(item); // add to the ul which has an empty array
+                displayItems(); // show update item
+
+                input.value = ""; // clear input field
+            }
+        }
+
+        //Display function to show array in ul
+        function displayItems() {
+            let List = document.getElementById('newSupply');
+            List.innerHTML = ""; // Clear existing list
+
+
+            // Loop through the array and Display each item
+            newItem.forEach(function(item, index) {
+                let li = document.createElement("li");
+                li.textContent = (index + 1) + "." + item;
+                List.appendChild(li);
+            });
+        }
+
+        //Remove All item
+        function removeItem() {
+            newItem = [];
+            displayItems();
+        }
+    </script>
+
+
+</body>
+
+</html>
