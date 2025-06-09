@@ -9,9 +9,7 @@ filter(): Returns only items that meet a condition.
 find(): Returns the first item that matches.
 
 ✨ Example:
-javascript
-Copy
-Edit
+
 let numbers = [1, 2, 3, 4, 5];
 
 let doubled = numbers.map(n => n * 2); // [2, 4, 6, 8, 10]

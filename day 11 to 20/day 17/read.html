@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout and setInterval</title>
+</head>
+
+<body>
+
+    <h1>Check Console</h1>
+
+    <script>
+        setTimeout(() => {
+            console.log("Load Successful!")
+        }, 13000);
+
+        let cout = 0;
+
+        let interval = setInterval(() => {
+            cout++;
+            console.log('Running....', cout);
+            if (cout === 10) {
+                clearInterval(interval)
+            }
+        }, 1000);
+
+        let name = "lily";
+        let Check = setInterval(() => {
+
+            console.log("Hello Am", name);
+
+            if (name === "Glory") {
+                clearInterval(Check)
+            }
+        }, 11000);
+
+        // Simulate changing the name after 9 seconds
+        setTimeout(() => {
+            name = "Glory";
+            console.log("✨ Name changed to Glory");
+        }, 12000);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+    <link rel="stylesheet" href="cha.css">
+</head>
+
+<body>
+    <h1 id="countdown">5</h1>
+
+    <script>
+        let seconds = 5;
+        let countDownEl = document.getElementById('countdown');
+
+        let countdown = setInterval(() => {
+            countDownEl.textContent = seconds;
+
+            seconds--;
+            if (seconds < 0) {
+                clearInterval(countdown);
+                countDownEl.textContent = "Background changed";
+
+                document.body.style.backgroundColor = "pink"
+
+            }
+
+        }, 1000);
+    </script>
+</body>
+
+</html>

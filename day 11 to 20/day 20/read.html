@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 20 – JSON & localStorage</title>
+</head>
+
+<body>
+    <h1>Day 20 – JSON & localStorage</h1>
+
+    <script>
+        let user = {
+            name: "Glory",
+            role: "Front-End Dev",
+            codeName: "Mira"
+        }
+        localStorage.setItem("userData", JSON.stringify(user));
+
+        let storageUser = JSON.parse(localStorage.getItem("userData"));
+
+        console.log(storageUser.name);
+
+        let lily = {
+            name: "Lillian",
+            role: "Backend dev"
+        }
+        localStorage.setItem("userInfo", JSON.stringify(lily));
+
+        let StoreData = JSON.parse(localStorage.getItem("userInfo"));
+        console.log(StoreData);
+    </script>
+</body>
+
+</html>

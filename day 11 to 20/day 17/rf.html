@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 1s ease;
+        }
+        
+        #countdown {
+            font-size: 80px;
+            animation: bounce 1s infinite;
+        }
+        
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="countdown">5</h1>
+
+    <script>
+        let seconds = 5;
+        let countDownEl = document.getElementById('countdown');
+
+        // Function to generate a random color
+        function getRandomColor() {
+            const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Change background color every 2 seconds
+        let colorChanger = setInterval(() => {
+            document.body.style.backgroundColor = getRandomColor();
+        }, 1000);
+
+        // Countdown timer
+        let countdown = setInterval(() => {
+            countDownEl.textContent = seconds;
+            seconds--;
+
+            if (seconds < 0) {
+                clearInterval(countdown);
+                clearInterval(colorChanger);
+                countDownEl.textContent = "Done!";
+                document.body.style.backgroundColor = "#00cc99"; // final color
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced DOM Manipulation</title>
+</head>
+
+<body>
+    <h1>Advanced DOM Manipulation</h1>
+    <button onclick="Add()">Add item ✨</button>
+    <button onclick="Remove()">Remove item ✨</button>
+
+
+    <!-- Create one <ul> to hold all <li> items -->
+    <ul id="myList"></ul>
+
+    <script>
+        function Add() {
+            let ul = document.getElementById('myList');
+            let li = document.createElement('li');
+            li.textContent = prompt();
+            ul.appendChild(li);
+        }
+
+        function Remove() {
+            let ul = document.getElementById('myList');
+            let lastItem = ul.lastElementChild;
+
+            if (lastItem) {
+
+                setTimeout(() => {
+                    ul.removeChild(lastItem);
+                }, 3000);
+            } else {
+                alert('No item to remove!');
+            }
+        }
+    </script>
+</body>
+
+
+</html>

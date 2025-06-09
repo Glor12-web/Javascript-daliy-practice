@@ -5,8 +5,6 @@ Topics Covered: Storing objects inside arrays, accessing nested values
 You can combine objects and arrays to store complex data:
 
 javascript
-Copy
-Edit
 let students = [
     { name: "Glory", score: 90 },
     { name: "Sam", score: 75 }

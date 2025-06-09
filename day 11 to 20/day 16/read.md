@@ -9,9 +9,7 @@ appendChild(): Adds an element to the DOM.
 removeChild(): Removes an element from the DOM.
 
 ✨ Example:
-javascript
-Copy
-Edit
+
 let ul = document.createElement('ul');
 document.body.appendChild(ul);
 
@@ -30,3 +28,7 @@ Add a button to dynamically add a list item.
 
 Add a "Remove Last Item" button.
 
+ul.lastElementChild
+✅ Removing only last item: ul.lastElementChild targets the last <li> inside the <ul>.
+
+   

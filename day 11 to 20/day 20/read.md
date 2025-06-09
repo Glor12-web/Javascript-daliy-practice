@@ -9,9 +9,7 @@ JSON.stringify(): Converts object → string.
 JSON.parse(): Converts string → object.
 
 ✨ Example:
-javascript
-Copy
-Edit
+
 let user = { name: "Glory", role: "Frontend Dev" };
 localStorage.setItem("userData", JSON.stringify(user));
 
