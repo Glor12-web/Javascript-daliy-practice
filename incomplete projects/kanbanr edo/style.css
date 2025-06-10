@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f2f2f2;
+}
+
+header,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.column {
+    background: #fff;
+    padding: 1rem;
+    width: 30%;
+    min-height: 390px;
+    border-radius: 1rem;
+}
+
+.column h2 {
+    margin-bottom: 1rem;
+}
+
+.card {
+    background: #e6f0ff;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.avarter {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #2f80ed;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+}
+
+.icons span {
+    margin-left: 10px;
+    color: #555;
+}
+
+.add-card {
+    background: #2f80ed;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    transition: 0.3s ease-in;
+}
+
+.add-card:hover {
+    background: #1e60c3;
+}
+
+.add-card-form {
+    margin-top: 1rem;
+}
+
+.add-card-form input {
+    padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-card-form button {
+    background: #27ae60;
+    color: white;
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.empty-state {
+    color: #aaa;
+    font-style: italic;
+}
+
+.hidden {
+    display: none;
+}

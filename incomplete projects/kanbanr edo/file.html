@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kanban board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mira Kanban Board</h1>
+    </header>
+
+
+    <main class="main">
+
+        <div class="column">
+            <h2>To-Do List</h2>
+            <div class="task-list">
+                <div class="card">
+                    <h3>Example Task</h3>
+                    <p>Description goes here</p>
+
+                    <div class="card-footer">
+                        <div class="avarter">A</div>
+                        <div class="icons">
+                            <span class="edit">Edit</span>
+                            <span class="Delete">Delete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="add-card-form hidden">
+                <input type="text" placeholder="Enter task">
+                <button class="confirm-add">add</button>
+            </div>
+
+            <button class="add-card">+ add Card</button>
+        </div>
+
+        <div class="column">
+            <h2>In Progress</h2>
+            <div class="task-list"></div>
+            <p class="empty-state">No tasks yet</p>
+
+
+            <div class="add-card-form hidden">
+                <input type="text" placeholder="Enter task">
+                <button class="confirm-add">add</button>
+            </div>
+
+            <button class="add-card">+ add Card</button>
+        </div>
+
+
+        <div class="column">
+            <h2>Done</h2>
+            <div class="task-list"></div>
+            <p class="empty-state">No tasks yet</p>
+
+
+            <div class="add-card-form hidden">
+                <input type="text" placeholder="Enter task">
+                <button class="confirm-add">add</button>
+            </div>
+
+            <button class="add-card">+ add Card</button>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <p>© 2025 Miratech – All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
