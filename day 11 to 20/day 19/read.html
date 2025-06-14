@@ -10,17 +10,23 @@
 <body>
     <h1>Check console</h1>
     <script>
-        let numers = [1, 2, 3, 4, 5, 6, 7, 8];
+        // Original array
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
-        let doubled = numers.map(n => n * 2);
-        console.log("Doubled", doubled);
+        // 1. map(): Returns a new array with each number doubled
+        let doubled = numbers.map(n => n * 2);
+        console.log("Doubled:", doubled); // [2, 4, 6, 8, 10, 12, 14, 16]
 
-        let Filterd = numers.filter(f => f > 5);
-        console.log(Filterd);
+        // 2. filter(): Returns a new array with numbers greater than 5
+        let filtered = numbers.filter(n => n > 5);
+        console.log("Filtered (>5):", filtered); // [6, 7, 8]
 
-        let Finded = numers.find(r => r > 5);
-        console.log("find", Finded);
+        // 3. find(): Returns the first number greater than 5
+        let found = numbers.find(n => n > 5);
+        console.log("First number > 5:", found); // 6
     </script>
+
+
 </body>
 
 </html>

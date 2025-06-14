@@ -16,11 +16,14 @@
             role: "Front-End Dev",
             codeName: "Mira"
         }
+
+
         localStorage.setItem("userData", JSON.stringify(user));
 
         let storageUser = JSON.parse(localStorage.getItem("userData"));
 
         console.log(storageUser.name);
+
 
         let lily = {
             name: "Lillian",

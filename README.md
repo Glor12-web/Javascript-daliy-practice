@@ -3,18 +3,8 @@ This repository documents my daily progress as I learn JavaScript from scratch.I
 
 
 
-Your JavaScript revision from Day 1 to Day 20 is now ready and saved. Here's a quick overview of what each day includes:
 
 ✅ Summary
-Day 1–5: Basics (console, alert, variables, operators, conditions, functions)
-
-Day 6–10: Arrays, loops, forEach
-
-Day 11–14: DOM manipulation, events, a to-do list, and form validation
-
-Day 15: Recap day
-
-Day 16–20: Advanced DOM, timers, objects in arrays, array methods (map, filter, find), and localStorage
 
 ✅ Assignments to Practice
 Each assignment below matches its concept:
